@@ -53,6 +53,8 @@ const Wrapper = styled.div`
   grid-template-areas:
     'markets-section'
     'sports-section';
+  grid-template-columns:
+    100%;
   gap: 48px;
 
   @media ${QUERIES.laptopAndUp} {
@@ -78,6 +80,8 @@ const MarketCards = styled.div`
   gap: 16px;
   grid-template-columns:
     repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-columns:
+    minmax(150px, 1fr);
 `;
 
 const SportsSection = styled.section`
@@ -89,7 +93,9 @@ const SportsSection = styled.section`
 `;
 
 const SportsStoriesWrapper = styled.div`
-  overflow-x: auto;
+  @media ${QUERIES.tabletAndUp} {
+    overflow-x: auto;
+  }
 `;
 
 const SportsStories = styled.div`
@@ -102,7 +108,8 @@ const SportsStories = styled.div`
     grid-auto-flow: column;
     grid-template-columns:
       repeat(auto-fill, minmax(215px, 1fr));
-    grid-auto-columns: minmax(215px,1fr);
+    grid-auto-columns:
+      minmax(215px,1fr);
   }
 `;
 
