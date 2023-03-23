@@ -25,18 +25,18 @@ const MainStoryGrid = () => {
       <SecondaryStorySection>
         <StoryList>
           {SECONDARY_STORIES.map((story, index) => (
-            <SecondaryStory className="secondaryStory" key={story.id} {...story} />
+            <SecondaryStory key={story.id} {...story} />
           ))}
         </StoryList>
       </SecondaryStorySection>
 
       <OpinionSection>
         <SectionTitle>Opinion</SectionTitle>
-        <StoryList style={{'--tablet-flex-direction': "row"}}>
+        <OpinionStoryList>
           {OPINION_STORIES.map((story, index) => (
-            <OpinionStory className="opinionStory" key={story.id} {...story} />
+            <OpinionStory key={story.id} {...story} />
           ))}
-        </StoryList>
+        </OpinionStoryList>
       </OpinionSection>
 
       <AdvertisementSection>
@@ -112,25 +112,27 @@ const StoryList = styled.div`
     padding-bottom: 0;
     border-bottom: none;
   }
+`;
 
+const OpinionStoryList = styled(StoryList)`
   @media ${QUERIES.tabletOnly} {  
-    flex-direction: var(--tablet-flex-direction, column);
+    flex-direction: row;
 
-    .opinionStory {
+    a {
       padding: 0 16px;
       border: none;
-      width: 100%;
+      flex: 1;
     }
 
-    & .opinionStory:first-child {
+    & a:first-child {
       padding-left: 0;
     }
-  
-    & .opinionStory:last-child {
+
+    & a:last-child {
       padding-right: 0;
     }
   }
-`;
+`
 
 const OpinionSection = styled.section`
   grid-area: opinion-stories;
@@ -140,7 +142,7 @@ const OpinionSection = styled.section`
   }
 
   @media ${QUERIES.desktopAndUp} {
-    margin-top: 0px;
+    margin-top: -8px;
     padding-left: 16px;
   }
 `;

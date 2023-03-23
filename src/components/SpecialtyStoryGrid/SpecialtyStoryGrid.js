@@ -79,9 +79,9 @@ const MarketCards = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns:
-    repeat(auto-fill, minmax(150px, 1fr));
+    repeat(auto-fill, minmax(165px, 1fr));
   grid-auto-columns:
-    minmax(150px, 1fr);
+    minmax(165px, 1fr);
 `;
 
 const SportsSection = styled.section`
@@ -102,7 +102,7 @@ const SportsStories = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns:
-    repeat(auto-fill, minmax(150px, 1fr));
+    repeat(auto-fill, minmax(165px, 1fr));
 
   @media ${QUERIES.tabletAndUp} {
     grid-auto-flow: column;

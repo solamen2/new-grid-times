@@ -82,6 +82,7 @@ const Link = styled.a`
   font-family: var(--font-family-serif);
   font-size: 0.875rem;
   font-style: italic;
+  color: var(--color-gray-900);
 `;
 
 const Row = styled(MaxWidthWrapper)`

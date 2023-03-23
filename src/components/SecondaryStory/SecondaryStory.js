@@ -66,6 +66,7 @@ const Heading = styled.h2`
 `;
 
 const GridWrapper = styled.div`
+  /* You can also "align-self: start" on Abstract instead of using this wrapper */
   grid-area: abstract;
 `;
 

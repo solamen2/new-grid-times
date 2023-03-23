@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { QUERIES } from '../../constants';
 
-const OpinionStory = ({ className, id, title, author, avatar }) => {
+const OpinionStory = ({ id, title, author, avatar }) => {
   return (
-    <a className={className} href={`/story/${id}`}>
+    <a href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
         <div>
@@ -29,7 +29,8 @@ const Avatar = styled.img`
   @media ${QUERIES.tabletOnly}
   {
     float: none;
-    margin-left: 0px;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 
   display: block;
